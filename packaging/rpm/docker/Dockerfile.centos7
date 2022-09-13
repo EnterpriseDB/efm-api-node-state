@@ -11,4 +11,3 @@ RUN yum -y update && \
        glibc-devel
 
 RUN sh -c "curl https://sh.rustup.rs -sSf | sh -s -- -y"
-RUN PATH=$PATH:$HOME/.cargo/bin cargo install cargo-generate-rpm
