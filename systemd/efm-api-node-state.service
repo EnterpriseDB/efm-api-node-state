@@ -1,0 +1,14 @@
+[Unit]
+Description=EFM API Node State Service
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=simple
+TimeoutSec=120
+User=efm
+
+ExecStart=/usr/edb/efm-api-node-state/bin/efm-api-node-state -c /etc/edb/efm-api-node-state/config.toml
+
+[Install]
+WantedBy=multi-user.target

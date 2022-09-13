@@ -1,0 +1,14 @@
+FROM centos:7
+
+RUN yum -y update && \
+    yum -y install \
+       ca-certificates \
+       curl \
+       gcc \
+       rpm-build \
+       redhat-rpm-config \
+       yum-utils \
+       glibc-devel
+
+RUN sh -c "curl https://sh.rustup.rs -sSf | sh -s -- -y"
+RUN PATH=$PATH:$HOME/.cargo/bin cargo install cargo-generate-rpm
