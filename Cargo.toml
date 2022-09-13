@@ -1,0 +1,29 @@
+[package]
+name = "efm-api-node-state"
+version = "0.1.0"
+edition = "2021"
+license = "BSD-2"
+description = "HTTP service and REST API exposing the state of the current EFM node"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+actix-rt = "2"
+async-process = "1.5"
+clap = "3.2.20"
+futures-lite = "1.12"
+log = "0.4"
+serde = "1.0.144"
+serde_derive = "1.0.144"
+toml = "0.5.9"
+
+[dependencies.simple_logger]
+default-features = false
+version = "2.3"
+
+[profile.release]
+strip = true
+opt-level = 'z'
+lto = true
+codegen-units = 1

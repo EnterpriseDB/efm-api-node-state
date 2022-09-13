@@ -1,0 +1,8 @@
+[config]
+primary_command = "/usr/edb/efm-api-node-state/scripts/efm_check_primary.sh 4.5 main"
+standby_command = "/usr/edb/efm-api-node-state/scripts/efm_check_standby.sh 4.5 main"
+listen_addr = "0.0.0.0"
+port = 9000
+shell = "/bin/sh"
+# DEBUG, INFO, WARN, ERROR
+log_level = "DEBUG"
