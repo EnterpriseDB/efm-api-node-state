@@ -50,8 +50,8 @@ fi
 exit 0
 
 %changelog
-* Mon Sep 12 2022 Julien Tachoires <julien.tachoires@enterprisedb.com> - 0.1.0-1
-- Initial release
-
 * Tue Sep 20 2022 Julien Tachoires <julien.tachoires@enterprisedb.com> - 0.2.0-1
 - Release 0.2.0
+
+* Mon Sep 12 2022 Julien Tachoires <julien.tachoires@enterprisedb.com> - 0.1.0-1
+- Initial release
