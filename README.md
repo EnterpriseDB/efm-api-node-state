@@ -12,9 +12,9 @@ changes on traffic routing.
 
 ## GET /primary
 
-Based on the execution of the EFM `node-status-json` command, this API call
-returns an HTTP response code set to `200` if the current node is the primary
-node of the EFM cluster.
+Based on the presence of a specific EFM trigger file, this API call returns
+an HTTP response code set to `200` if the current node is the primary node of
+the EFM cluster.
 
 Example:
 ```http
@@ -67,6 +67,19 @@ port = 9000
 shell = "/bin/sh"
 # DEBUG, INFO, WARN, ERROR
 log_level = "DEBUG"
+```
+
+## EFM configuration
+
+EFM configuration must be updated with the following properties:
+```
+script.load.balancer.attach=/bin/touch /var/run/efm-4.5/efm_trigger_%t
+script.load.balancer.detach=/bin/rm -f /var/run/efm-4.5/efm_trigger_%t
+script.custom.monitor=/usr/edb/efm-api-node-state/scripts/efm_monitor.sh 4.5
+custom.monitor.interval=5
+custom.monitor.timeout=10
+custom.monitor.safe.mode=true
+auto.resume.period=5
 ```
 
 ### Settings

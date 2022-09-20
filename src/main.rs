@@ -40,7 +40,7 @@ impl EFMAPINodeStateArgs {
     {
         // Basic app information
         let cmd = ClapCommand::new("efm-api-node-state")
-            .version("0.1.0")
+            .version("0.2.0")
             .about("HTTP service and REST API exposing the state of the current EFM node.")
             .author("EDB");
 
