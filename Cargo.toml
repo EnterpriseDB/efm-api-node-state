@@ -1,6 +1,6 @@
 [package]
 name = "efm-api-node-state"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 license = "BSD-2"
 description = "HTTP service and REST API exposing the state of the current EFM node"
