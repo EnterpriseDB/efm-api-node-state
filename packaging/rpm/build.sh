@@ -2,7 +2,8 @@
 
 source $HOME/.cargo/env
 
-VERSION="0.1.0"
+VERSION="0.2.0"
+
 cd /workspace
 
 yum-builddep -y /workspace/packaging/rpm/efm-api-node-state.spec
