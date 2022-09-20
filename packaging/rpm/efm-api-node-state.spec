@@ -28,7 +28,7 @@ cargo build --release
 %{__install} /workspace/target/release/efm-api-node-state %{buildroot}/%{installpath}/bin/efm-api-node-state
 %{__install} /workspace/scripts/efm_check_primary.sh %{buildroot}/usr/edb/efm-api-node-state/scripts/efm_check_primary.sh
 %{__install} /workspace/scripts/efm_check_standby.sh %{buildroot}/usr/edb/efm-api-node-state/scripts/efm_check_standby.sh
-%{__install} /workspace/scripts/efm_monitoring.sh %{buildroot}/usr/edb/efm-api-node-state/scripts/efm_monitoring.sh
+%{__install} /workspace/scripts/efm_monitor.sh %{buildroot}/usr/edb/efm-api-node-state/scripts/efm_monitor.sh
 %{__install} /workspace/config.toml %{buildroot}/etc/edb/efm-api-node-state/config.toml
 %{__install} /workspace/systemd/efm-api-node-state.service %{buildroot}/lib/systemd/system/efm-api-node-state.service
 
@@ -39,7 +39,7 @@ cargo build --release
 %attr(-, root, root) %{installpath}/bin/efm-api-node-state
 %attr(-, root, root) /usr/edb/efm-api-node-state/scripts/efm_check_primary.sh
 %attr(-, root, root) /usr/edb/efm-api-node-state/scripts/efm_check_standby.sh
-%attr(-, root, root) /usr/edb/efm-api-node-state/scripts/efm_monitoring.sh
+%attr(-, root, root) /usr/edb/efm-api-node-state/scripts/efm_monitor.sh
 %attr(0644, root, root) /etc/edb/efm-api-node-state/config.toml
 %attr(-, root, root) /lib/systemd/system/efm-api-node-state.service
 
