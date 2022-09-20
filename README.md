@@ -50,7 +50,7 @@ The RPM packages are available via the GitHub release page.
 
 Package installation:
 ```shell
-$ sudo rpm -ivh efm-api-node-state-0.1.0-1.el7.x86_64.rpm
+$ sudo rpm -ivh efm-api-node-state-0.2.0-1.el7.x86_64.rpm
 ```
 
 ## Configuration
